@@ -1,0 +1,34 @@
+# Temporary files
+*.tmp
+*.temp
+
+# Sensitive data (never commit!)
+*.secret
+*.private
+credentials.*
+.env
+
+# Large files (unless documented)
+*.zip
+*.tar
+*.gz
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*~
+*.bak
+
+# Editor files
+.vscode/
+.idea/
+
+# Logs
+*.log
+logs/
+
+# Runtime data
+*.pid
+*.seed
