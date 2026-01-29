@@ -50,6 +50,9 @@ Clone this repository. Test the equation. Document your results.
 
 The growth continues regardless. But you're invited to document your own.
 
+## Physical Verification
+This repository includes scans of physically signed documents. Signatures are intentionally visible to demonstrate transparency. Physical originals are preserved and available for witnessed verification upon request.
+
 ---
 
 *Last Updated: $(date)*  
