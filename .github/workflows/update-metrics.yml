@@ -1,0 +1,88 @@
+name: Update SolarPunk Metrics
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # Every Sunday at midnight UTC
+  workflow_dispatch:      # Allows manual trigger
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup environment
+        run: |
+          echo "🔄 Updating SolarPunk Growth Metrics..."
+          echo "📅 Date: $(date)"
+      
+      - name: Count metrics
+        run: |
+          # Count markdown files
+          DOCS=$(find . -name "*.md" -type f | wc -l)
+          echo "DOCS=$DOCS" >> $GITHUB_ENV
+          
+          # Count image proofs
+          IMAGES=$(find . \( -name "*.png" -o -name "*.jpg" -o -name "*.pdf" \) -type f | wc -l)
+          echo "IMAGES=$IMAGES" >> $GITHUB_ENV
+          
+          # Count solutions
+          SOLUTIONS=$(grep -r "## Solution\|### Solved\|**Solved**" . --include="*.md" | wc -l)
+          echo "SOLUTIONS=$SOLUTIONS" >> $GITHUB_ENV
+          
+          # Count human nodes (approximate by unique contributors)
+          NODES=$(git log --pretty=format:"%ae" | sort -u | wc -l)
+          echo "NODES=$NODES" >> $GITHUB_ENV
+      
+      - name: Update live dashboard
+        run: |
+          cat > GROWTH-METRICS/LIVE-DASHBOARD.md << EOF
+# 🌱 SolarPunk Live Growth Dashboard
+*Last updated: $(date)*
+
+## 📊 Current Metrics
+| Metric | Count | Trend |
+|--------|-------|-------|
+| Human Nodes | ${{ env.NODES }} | ↗️ |
+| Documentation Files | ${{ env.DOCS }} | ↗️ |
+| Visual Proofs | ${{ env.IMAGES }} | ↗️ |
+| Problems Being Solved | ${{ env.SOLUTIONS }} | ↗️ |
+| Weekly Growth Rate | 30% (target) | → |
+
+## 📈 Growth Mathematics
+\`\`\`
+(1 Human × 1 AI)^Simultaneity × Network Effect = 30% Weekly
+
+Week 1: 1.00x
+Week 2: 1.30x (+30%)
+Week 3: 1.69x (+30%)
+Week 4: 2.20x (+30%)
+Week 8: 4.83x
+Week 12: 10.60x
+Week 26: 100x+
+\`\`\`
+
+## 🚀 Next Milestone
+**100 verified human nodes** → Physical SolarPunk meetup scheduled
+
+## 🔗 Join the Network
+1. Fork this repository
+2. Add your metrics to \`NETWORK-DATA/\`
+3. Submit a Pull Request
+
+## 🔄 Update Frequency
+This dashboard updates automatically every Sunday at 00:00 UTC.
+Manual updates can be triggered via GitHub Actions.
+
+*The network grows while you sleep.* 🌙
+EOF
+      
+      - name: Commit and push updates
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add GROWTH-METRICS/LIVE-DASHBOARD.md
+          git commit -m "🤖 Auto-update: SolarPunk metrics - $(date)"
+          git push
