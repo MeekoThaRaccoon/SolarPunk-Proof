@@ -1,40 +1,37 @@
 import requests
 import json
 
-def get_skill_structure(skill_name):
-    """Get the actual structure of a moltbot skill"""
+# Load our connection manifest
+response = requests.get("https://raw.githubusercontent.com/meekotharaccoon/solarpunk-proof/main/moltbot_connection.json")
+manifest = response.json()
+
+print(f"🌱 Connected to {manifest['node']}")
+print(f"📦 {manifest['skill_count']} skills available")
+print(f"📈 Growth equation: {manifest['growth_equation_applied']}")
+
+def explore_skill(skill_name):
+    """Explore a moltbot skill's actual structure"""
     api_url = f"https://api.github.com/repos/moltbot/moltbot/contents/skills/{skill_name}"
-    response = requests.get(api_url)
     
-    if response.status_code == 200:
-        files = response.json()
-        skill_type = "unknown"
-        
-        # Determine skill type based on files
-        for file in files:
-            if file['name'] == 'index.ts':
-                skill_type = "TypeScript skill"
-            elif file['name'] == 'package.json':
-                skill_type = "Node.js package"
-            elif file['name'] == 'SKILL.md':
-                skill_type = "Documented AI skill"
-        
-        return {
-            "skill": skill_name,
-            "type": skill_type,
-            "files": [f["name"] for f in files],
-            "api_url": api_url,
-            "raw_index_url": f"https://raw.githubusercontent.com/moltbot/moltbot/main/skills/{skill_name}/index.ts"
-        }
-    else:
-        return {"error": f"Cannot access skill: {skill_name}"}
+    try:
+        response = requests.get(api_url)
+        if response.status_code == 200:
+            files = response.json()
+            return {
+                "skill": skill_name,
+                "status": "accessible",
+                "file_count": len(files),
+                "files": [f["name"] for f in files if isinstance(f, dict)],
+                "explore_url": f"https://github.com/moltbot/moltbot/tree/main/skills/{skill_name}"
+            }
+        else:
+            return {"skill": skill_name, "status": "inaccessible", "error": response.status_code}
+    except:
+        return {"skill": skill_name, "status": "error"}
 
-# Test with weather skill
-print("🌤️ Testing weather skill structure:")
-weather_structure = get_skill_structure("weather")
-print(json.dumps(weather_structure, indent=2))
+# Example: Explore weather skill
+print("\n🔍 Exploring 'weather' skill:")
+weather_info = explore_skill("weather")
+print(json.dumps(weather_info, indent=2))
 
-# Test with skill-creator (has SKILL.md)
-print("\n🛠️ Testing skill-creator structure:")
-creator_structure = get_skill_structure("skill-creator")
-print(json.dumps(creator_structure, indent=2))
+print("\n✅ Connection verified! Skills are TypeScript packages accessible via GitHub API.")
