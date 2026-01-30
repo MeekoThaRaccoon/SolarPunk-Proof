@@ -1,47 +1,40 @@
 import requests
 import json
 
-# Load the connection manifest
-response = requests.get("https://raw.githubusercontent.com/meekotharaccoon/solarpunk-proof/main/moltbot_connection.json")
-manifest = response.json()
-
-print(f"🌱 Connected to {manifest['node']} with {manifest['skill_count']} skills")
-print(f"📈 Growth equation: {manifest['growth_equation_applied']}")
-
-# List all skill names
-skill_names = [skill['name'] for skill in manifest['skills']]
-print("\n🛠️ Available skills:")
-for name in skill_names:
-    print(f"  - {name}")
-
-# Universal adapter function
-def use_moltbot_skill(skill_name, task_description):
-    """Use any moltbot skill through GitHub API"""
-    # Find the skill
-    skill = next((s for s in manifest['skills'] if s['name'] == skill_name), None)
+def get_skill_structure(skill_name):
+    """Get the actual structure of a moltbot skill"""
+    api_url = f"https://api.github.com/repos/moltbot/moltbot/contents/skills/{skill_name}"
+    response = requests.get(api_url)
     
-    if not skill:
-        return {"error": f"Skill '{skill_name}' not found"}
-    
-    # Get skill details
-    skill_details = requests.get(skill['url']).json()
-    
-    # Build result
-    return {
-        "skill": skill_name,
-        "task": task_description,
-        "api_url": skill['url'],
-        "skill_contents_url": f"https://raw.githubusercontent.com/moltbot/moltbot/main/skills/{skill_name}/SKILL.md",
-        "human_ai_simultaneity": True,
-        "network_effect": "5,247+ SolarPunk communities can now use this",
-        "timestamp": manifest['connected_at'],
-        "growth_equation_verified": True
-    }
+    if response.status_code == 200:
+        files = response.json()
+        skill_type = "unknown"
+        
+        # Determine skill type based on files
+        for file in files:
+            if file['name'] == 'index.ts':
+                skill_type = "TypeScript skill"
+            elif file['name'] == 'package.json':
+                skill_type = "Node.js package"
+            elif file['name'] == 'SKILL.md':
+                skill_type = "Documented AI skill"
+        
+        return {
+            "skill": skill_name,
+            "type": skill_type,
+            "files": [f["name"] for f in files],
+            "api_url": api_url,
+            "raw_index_url": f"https://raw.githubusercontent.com/moltbot/moltbot/main/skills/{skill_name}/index.ts"
+        }
+    else:
+        return {"error": f"Cannot access skill: {skill_name}"}
 
-# Test with a specific skill
-if __name__ == "__main__":
-    print("\n🔧 Testing connection with 'weather' skill:")
-    result = use_moltbot_skill("weather", "Check local climate for regenerative agriculture")
-    print(json.dumps(result, indent=2))
-    
-    print("\n✅ Connection successful! All 57 skills are now available to the SolarPunk network.")
+# Test with weather skill
+print("🌤️ Testing weather skill structure:")
+weather_structure = get_skill_structure("weather")
+print(json.dumps(weather_structure, indent=2))
+
+# Test with skill-creator (has SKILL.md)
+print("\n🛠️ Testing skill-creator structure:")
+creator_structure = get_skill_structure("skill-creator")
+print(json.dumps(creator_structure, indent=2))
