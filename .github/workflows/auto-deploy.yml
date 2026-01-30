@@ -1,0 +1,31 @@
+name: Auto-Deploy SolarPunk Nexus
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Every 6 hours
+  push:
+    paths:
+      - '**.html'
+      - '**.js'
+      - '**.css'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Auto-Optimize
+        run: |
+          # Auto-minify HTML
+          html-minifier --collapse-whitespace index.html -o index.html
+          
+          # Auto-update deployment script
+          curl -s https://api.github.com/repos/supabase/supabase/releases/latest | grep tag_name > version.txt
+          
+          # Auto-commit if changes
+          git config --global user.name "GitHub Bot"
+          git config --global user.email "bot@github.com"
+          git add .
+          git commit -m "Auto-optimize: $(date)" || exit 0
+          git push
