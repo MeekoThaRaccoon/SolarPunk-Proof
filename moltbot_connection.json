@@ -1,843 +1,271 @@
-# Create a connection manifest (one file, does everything)
-cat > moltbot_connection.json << 'EOF'
 {
   "node": "moltbot",
-  "connected_at": "$(date -u +'%Y-%m-%dT%H:%M:%SZ')",
+  "connected_at": "2024-07-01T00:00:00Z",
   "skill_count": 57,
   "api_url": "https://api.github.com/repos/moltbot/moltbot/contents/skills",
   "integration_method": "SolarPunk GitHub Bridge",
   "growth_equation_applied": "(Human × AI)^Simultaneity × Network Effect = 30% Weekly Growth",
   "evidence": "This file was created by simultaneous human-AI collaboration",
   "skills": [
-  {
-    "name": "1password",
-    "path": "skills/1password",
-    "sha": "650c7829e42d6f98058e147c9ddb2e2f97224bad",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/1password?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/1password",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/650c7829e42d6f98058e147c9ddb2e2f97224bad",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/1password?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/650c7829e42d6f98058e147c9ddb2e2f97224bad",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/1password"
+    {
+      "name": "1password",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/1password",
+      "type": "dir"
+    },
+    {
+      "name": "apple-notes",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/apple-notes",
+      "type": "dir"
+    },
+    {
+      "name": "apple-reminders",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/apple-reminders",
+      "type": "dir"
+    },
+    {
+      "name": "bear-notes",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/bear-notes",
+      "type": "dir"
+    },
+    {
+      "name": "bird",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/bird",
+      "type": "dir"
+    },
+    {
+      "name": "blogwatcher",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/blogwatcher",
+      "type": "dir"
+    },
+    {
+      "name": "blucli",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/blucli",
+      "type": "dir"
+    },
+    {
+      "name": "bluebubbles",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/bluebubbles",
+      "type": "dir"
+    },
+    {
+      "name": "camsnap",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/camsnap",
+      "type": "dir"
+    },
+    {
+      "name": "canvas",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/canvas",
+      "type": "dir"
+    },
+    {
+      "name": "clawdhub",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/clawdhub",
+      "type": "dir"
+    },
+    {
+      "name": "coding-agent",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/coding-agent",
+      "type": "dir"
+    },
+    {
+      "name": "discord",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/discord",
+      "type": "dir"
+    },
+    {
+      "name": "eightctl",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/eightctl",
+      "type": "dir"
+    },
+    {
+      "name": "food-order",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/food-order",
+      "type": "dir"
+    },
+    {
+      "name": "gemini",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/gemini",
+      "type": "dir"
+    },
+    {
+      "name": "gifgrep",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/gifgrep",
+      "type": "dir"
+    },
+    {
+      "name": "github",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/github",
+      "type": "dir"
+    },
+    {
+      "name": "gog",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/gog",
+      "type": "dir"
+    },
+    {
+      "name": "goplaces",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/goplaces",
+      "type": "dir"
+    },
+    {
+      "name": "himalaya",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/himalaya",
+      "type": "dir"
+    },
+    {
+      "name": "imsg",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/imsg",
+      "type": "dir"
+    },
+    {
+      "name": "local-places",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/local-places",
+      "type": "dir"
+    },
+    {
+      "name": "mcporter",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/mcporter",
+      "type": "dir"
+    },
+    {
+      "name": "model-usage",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/model-usage",
+      "type": "dir"
+    },
+    {
+      "name": "nano-banana-pro",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/nano-banana-pro",
+      "type": "dir"
+    },
+    {
+      "name": "nano-pdf",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/nano-pdf",
+      "type": "dir"
+    },
+    {
+      "name": "notion",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/notion",
+      "type": "dir"
+    },
+    {
+      "name": "obsidian",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/obsidian",
+      "type": "dir"
+    },
+    {
+      "name": "openai-image-gen",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/openai-image-gen",
+      "type": "dir"
+    },
+    {
+      "name": "openai-whisper-api",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/openai-whisper-api",
+      "type": "dir"
+    },
+    {
+      "name": "openai-whisper",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/openai-whisper",
+      "type": "dir"
+    },
+    {
+      "name": "openhue",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/openhue",
+      "type": "dir"
+    },
+    {
+      "name": "oracle",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/oracle",
+      "type": "dir"
+    },
+    {
+      "name": "ordercli",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/ordercli",
+      "type": "dir"
+    },
+    {
+      "name": "peekaboo",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/peekaboo",
+      "type": "dir"
+    },
+    {
+      "name": "sag",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/sag",
+      "type": "dir"
+    },
+    {
+      "name": "session-logs",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/session-logs",
+      "type": "dir"
+    },
+    {
+      "name": "sherpa-onnx-tts",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/sherpa-onnx-tts",
+      "type": "dir"
+    },
+    {
+      "name": "skill-creator",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/skill-creator",
+      "type": "dir"
+    },
+    {
+      "name": "slack",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/slack",
+      "type": "dir"
+    },
+    {
+      "name": "songsee",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/songsee",
+      "type": "dir"
+    },
+    {
+      "name": "sonoscli",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/sonoscli",
+      "type": "dir"
+    },
+    {
+      "name": "spotify-player",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/spotify-player",
+      "type": "dir"
+    },
+    {
+      "name": "summarize",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/summarize",
+      "type": "dir"
+    },
+    {
+      "name": "things-mac",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/things-mac",
+      "type": "dir"
+    },
+    {
+      "name": "tmux",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/tmux",
+      "type": "dir"
+    },
+    {
+      "name": "trello",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/trello",
+      "type": "dir"
+    },
+    {
+      "name": "video-frames",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/video-frames",
+      "type": "dir"
+    },
+    {
+      "name": "voice-call",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/voice-call",
+      "type": "dir"
+    },
+    {
+      "name": "wacli",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/wacli",
+      "type": "dir"
+    },
+    {
+      "name": "weather",
+      "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/weather",
+      "type": "dir"
     }
-  },
-  {
-    "name": "apple-notes",
-    "path": "skills/apple-notes",
-    "sha": "405cb6316d96c52a97a00f2972040bc0ced26a47",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/apple-notes?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/apple-notes",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/405cb6316d96c52a97a00f2972040bc0ced26a47",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/apple-notes?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/405cb6316d96c52a97a00f2972040bc0ced26a47",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/apple-notes"
-    }
-  },
-  {
-    "name": "apple-reminders",
-    "path": "skills/apple-reminders",
-    "sha": "df2562680add6d23a1d20cf15d32664eda39a81f",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/apple-reminders?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/apple-reminders",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/df2562680add6d23a1d20cf15d32664eda39a81f",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/apple-reminders?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/df2562680add6d23a1d20cf15d32664eda39a81f",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/apple-reminders"
-    }
-  },
-  {
-    "name": "bear-notes",
-    "path": "skills/bear-notes",
-    "sha": "ef08f9bbc1243a2a7450a69823b12dcca5f26a2c",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/bear-notes?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/bear-notes",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/ef08f9bbc1243a2a7450a69823b12dcca5f26a2c",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/bear-notes?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/ef08f9bbc1243a2a7450a69823b12dcca5f26a2c",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/bear-notes"
-    }
-  },
-  {
-    "name": "bird",
-    "path": "skills/bird",
-    "sha": "987579e87d79b1789e03e0409e27fdc21993e065",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/bird?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/bird",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/987579e87d79b1789e03e0409e27fdc21993e065",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/bird?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/987579e87d79b1789e03e0409e27fdc21993e065",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/bird"
-    }
-  },
-  {
-    "name": "blogwatcher",
-    "path": "skills/blogwatcher",
-    "sha": "6c614ce38b9cd44f339c681119203f8e00adf218",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/blogwatcher?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/blogwatcher",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/6c614ce38b9cd44f339c681119203f8e00adf218",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/blogwatcher?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/6c614ce38b9cd44f339c681119203f8e00adf218",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/blogwatcher"
-    }
-  },
-  {
-    "name": "blucli",
-    "path": "skills/blucli",
-    "sha": "b5c70749d9ce2cf8ef0de037dd0c83560861be14",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/blucli?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/blucli",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/b5c70749d9ce2cf8ef0de037dd0c83560861be14",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/blucli?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/b5c70749d9ce2cf8ef0de037dd0c83560861be14",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/blucli"
-    }
-  },
-  {
-    "name": "bluebubbles",
-    "path": "skills/bluebubbles",
-    "sha": "9dd446b71a06de960bf9932093aa512ae58c4e91",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/bluebubbles?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/bluebubbles",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/9dd446b71a06de960bf9932093aa512ae58c4e91",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/bluebubbles?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/9dd446b71a06de960bf9932093aa512ae58c4e91",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/bluebubbles"
-    }
-  },
-  {
-    "name": "camsnap",
-    "path": "skills/camsnap",
-    "sha": "c930fbf47eb2799e097c2d82d1d6ead5a5653f90",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/camsnap?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/camsnap",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/c930fbf47eb2799e097c2d82d1d6ead5a5653f90",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/camsnap?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/c930fbf47eb2799e097c2d82d1d6ead5a5653f90",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/camsnap"
-    }
-  },
-  {
-    "name": "canvas",
-    "path": "skills/canvas",
-    "sha": "31ab566ebfc2d2722a42681512a5f5311c2c5431",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/canvas?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/canvas",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/31ab566ebfc2d2722a42681512a5f5311c2c5431",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/canvas?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/31ab566ebfc2d2722a42681512a5f5311c2c5431",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/canvas"
-    }
-  },
-  {
-    "name": "clawdhub",
-    "path": "skills/clawdhub",
-    "sha": "e58865c615e1da5cc257b6630106cb9d60a8b98a",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/clawdhub?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/clawdhub",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/e58865c615e1da5cc257b6630106cb9d60a8b98a",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/clawdhub?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/e58865c615e1da5cc257b6630106cb9d60a8b98a",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/clawdhub"
-    }
-  },
-  {
-    "name": "coding-agent",
-    "path": "skills/coding-agent",
-    "sha": "5a462f35892359a2d3c9ee62ecba6598654366e5",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/coding-agent?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/coding-agent",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/5a462f35892359a2d3c9ee62ecba6598654366e5",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/coding-agent?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/5a462f35892359a2d3c9ee62ecba6598654366e5",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/coding-agent"
-    }
-  },
-  {
-    "name": "discord",
-    "path": "skills/discord",
-    "sha": "e76ffa79babf6b5bc14219651e8367e1efba637c",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/discord?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/discord",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/e76ffa79babf6b5bc14219651e8367e1efba637c",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/discord?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/e76ffa79babf6b5bc14219651e8367e1efba637c",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/discord"
-    }
-  },
-  {
-    "name": "eightctl",
-    "path": "skills/eightctl",
-    "sha": "ace7f930b05584e7005aa66ab877749c4fa77494",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/eightctl?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/eightctl",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/ace7f930b05584e7005aa66ab877749c4fa77494",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/eightctl?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/ace7f930b05584e7005aa66ab877749c4fa77494",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/eightctl"
-    }
-  },
-  {
-    "name": "food-order",
-    "path": "skills/food-order",
-    "sha": "c66dfd0a45720fc19335759c8b8ab4b4d0e326e1",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/food-order?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/food-order",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/c66dfd0a45720fc19335759c8b8ab4b4d0e326e1",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/food-order?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/c66dfd0a45720fc19335759c8b8ab4b4d0e326e1",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/food-order"
-    }
-  },
-  {
-    "name": "gemini",
-    "path": "skills/gemini",
-    "sha": "ecdd90ce138082f08565ef6e8bf1c0c38bca16f9",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/gemini?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/gemini",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/ecdd90ce138082f08565ef6e8bf1c0c38bca16f9",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/gemini?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/ecdd90ce138082f08565ef6e8bf1c0c38bca16f9",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/gemini"
-    }
-  },
-  {
-    "name": "gifgrep",
-    "path": "skills/gifgrep",
-    "sha": "bc8d5077a588ab1971d017e6800a4e45565d6e54",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/gifgrep?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/gifgrep",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/bc8d5077a588ab1971d017e6800a4e45565d6e54",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/gifgrep?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/bc8d5077a588ab1971d017e6800a4e45565d6e54",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/gifgrep"
-    }
-  },
-  {
-    "name": "github",
-    "path": "skills/github",
-    "sha": "6d77b8be5d74a4cc791282304a6c7bc447c6f464",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/github?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/github",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/6d77b8be5d74a4cc791282304a6c7bc447c6f464",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/github?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/6d77b8be5d74a4cc791282304a6c7bc447c6f464",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/github"
-    }
-  },
-  {
-    "name": "gog",
-    "path": "skills/gog",
-    "sha": "96d7e3e22bc3255ce68cf5d1d111fb4010a1d735",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/gog?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/gog",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/96d7e3e22bc3255ce68cf5d1d111fb4010a1d735",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/gog?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/96d7e3e22bc3255ce68cf5d1d111fb4010a1d735",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/gog"
-    }
-  },
-  {
-    "name": "goplaces",
-    "path": "skills/goplaces",
-    "sha": "0a9336ce546998f951dd0ae55dd95fa485238afc",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/goplaces?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/goplaces",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/0a9336ce546998f951dd0ae55dd95fa485238afc",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/goplaces?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/0a9336ce546998f951dd0ae55dd95fa485238afc",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/goplaces"
-    }
-  },
-  {
-    "name": "himalaya",
-    "path": "skills/himalaya",
-    "sha": "26fdf8e024d6f27a351c00abdc7e7383d79cd8a7",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/himalaya?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/himalaya",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/26fdf8e024d6f27a351c00abdc7e7383d79cd8a7",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/himalaya?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/26fdf8e024d6f27a351c00abdc7e7383d79cd8a7",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/himalaya"
-    }
-  },
-  {
-    "name": "imsg",
-    "path": "skills/imsg",
-    "sha": "d9495a58e882e13b014d6af6ff412da6547e1434",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/imsg?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/imsg",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/d9495a58e882e13b014d6af6ff412da6547e1434",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/imsg?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/d9495a58e882e13b014d6af6ff412da6547e1434",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/imsg"
-    }
-  },
-  {
-    "name": "local-places",
-    "path": "skills/local-places",
-    "sha": "efa358c39710627894fa4047633736186b05e129",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/local-places?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/local-places",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/efa358c39710627894fa4047633736186b05e129",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/local-places?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/efa358c39710627894fa4047633736186b05e129",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/local-places"
-    }
-  },
-  {
-    "name": "mcporter",
-    "path": "skills/mcporter",
-    "sha": "db299eaff6074d0f08cd8bd55d8fe9f664299d5c",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/mcporter?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/mcporter",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/db299eaff6074d0f08cd8bd55d8fe9f664299d5c",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/mcporter?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/db299eaff6074d0f08cd8bd55d8fe9f664299d5c",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/mcporter"
-    }
-  },
-  {
-    "name": "model-usage",
-    "path": "skills/model-usage",
-    "sha": "bab42d311079fff0c2c63680c5bfaa7b09ef582e",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/model-usage?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/model-usage",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/bab42d311079fff0c2c63680c5bfaa7b09ef582e",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/model-usage?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/bab42d311079fff0c2c63680c5bfaa7b09ef582e",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/model-usage"
-    }
-  },
-  {
-    "name": "nano-banana-pro",
-    "path": "skills/nano-banana-pro",
-    "sha": "7a344f0b8bd716b8e3431fe9932b4037fa8e7f68",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/nano-banana-pro?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/nano-banana-pro",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/7a344f0b8bd716b8e3431fe9932b4037fa8e7f68",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/nano-banana-pro?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/7a344f0b8bd716b8e3431fe9932b4037fa8e7f68",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/nano-banana-pro"
-    }
-  },
-  {
-    "name": "nano-pdf",
-    "path": "skills/nano-pdf",
-    "sha": "ba1523aeb306652b76bd1ced3c70df37db52eedf",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/nano-pdf?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/nano-pdf",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/ba1523aeb306652b76bd1ced3c70df37db52eedf",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/nano-pdf?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/ba1523aeb306652b76bd1ced3c70df37db52eedf",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/nano-pdf"
-    }
-  },
-  {
-    "name": "notion",
-    "path": "skills/notion",
-    "sha": "fcc9a65fc2add2546b96c687b606fc8cb117680a",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/notion?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/notion",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/fcc9a65fc2add2546b96c687b606fc8cb117680a",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/notion?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/fcc9a65fc2add2546b96c687b606fc8cb117680a",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/notion"
-    }
-  },
-  {
-    "name": "obsidian",
-    "path": "skills/obsidian",
-    "sha": "f7538c26d1c9ba892ed09a139a62cb9818e78a5c",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/obsidian?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/obsidian",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/f7538c26d1c9ba892ed09a139a62cb9818e78a5c",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/obsidian?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/f7538c26d1c9ba892ed09a139a62cb9818e78a5c",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/obsidian"
-    }
-  },
-  {
-    "name": "openai-image-gen",
-    "path": "skills/openai-image-gen",
-    "sha": "11816989cbe1282d5467e4f32ae7bfba8d69c5ba",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/openai-image-gen?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/openai-image-gen",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/11816989cbe1282d5467e4f32ae7bfba8d69c5ba",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/openai-image-gen?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/11816989cbe1282d5467e4f32ae7bfba8d69c5ba",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/openai-image-gen"
-    }
-  },
-  {
-    "name": "openai-whisper-api",
-    "path": "skills/openai-whisper-api",
-    "sha": "3d176607ca0226dcd855e3f620365439294ef337",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/openai-whisper-api?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/openai-whisper-api",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/3d176607ca0226dcd855e3f620365439294ef337",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/openai-whisper-api?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/3d176607ca0226dcd855e3f620365439294ef337",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/openai-whisper-api"
-    }
-  },
-  {
-    "name": "openai-whisper",
-    "path": "skills/openai-whisper",
-    "sha": "8ec103a7bc23017e55d973d1c941cd54a95f5a20",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/openai-whisper?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/openai-whisper",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/8ec103a7bc23017e55d973d1c941cd54a95f5a20",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/openai-whisper?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/8ec103a7bc23017e55d973d1c941cd54a95f5a20",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/openai-whisper"
-    }
-  },
-  {
-    "name": "openhue",
-    "path": "skills/openhue",
-    "sha": "21c4a844c6189a90aa1161a914572152dfac5dcb",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/openhue?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/openhue",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/21c4a844c6189a90aa1161a914572152dfac5dcb",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/openhue?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/21c4a844c6189a90aa1161a914572152dfac5dcb",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/openhue"
-    }
-  },
-  {
-    "name": "oracle",
-    "path": "skills/oracle",
-    "sha": "c11b2ab2a870228129e999e76030c8842fd5aec2",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/oracle?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/oracle",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/c11b2ab2a870228129e999e76030c8842fd5aec2",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/oracle?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/c11b2ab2a870228129e999e76030c8842fd5aec2",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/oracle"
-    }
-  },
-  {
-    "name": "ordercli",
-    "path": "skills/ordercli",
-    "sha": "1def842c787be4b2becc67b0204ed615b5934ef4",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/ordercli?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/ordercli",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/1def842c787be4b2becc67b0204ed615b5934ef4",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/ordercli?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/1def842c787be4b2becc67b0204ed615b5934ef4",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/ordercli"
-    }
-  },
-  {
-    "name": "peekaboo",
-    "path": "skills/peekaboo",
-    "sha": "9d29b476b410bb85201a597895832e0b27be5409",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/peekaboo?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/peekaboo",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/9d29b476b410bb85201a597895832e0b27be5409",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/peekaboo?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/9d29b476b410bb85201a597895832e0b27be5409",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/peekaboo"
-    }
-  },
-  {
-    "name": "sag",
-    "path": "skills/sag",
-    "sha": "7450195a880f3bfaed7b35c48a3672f22f954d0c",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/sag?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/sag",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/7450195a880f3bfaed7b35c48a3672f22f954d0c",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/sag?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/7450195a880f3bfaed7b35c48a3672f22f954d0c",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/sag"
-    }
-  },
-  {
-    "name": "session-logs",
-    "path": "skills/session-logs",
-    "sha": "f3c07e1642d367e7c0c11adc15658c524c4bac51",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/session-logs?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/session-logs",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/f3c07e1642d367e7c0c11adc15658c524c4bac51",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/session-logs?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/f3c07e1642d367e7c0c11adc15658c524c4bac51",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/session-logs"
-    }
-  },
-  {
-    "name": "sherpa-onnx-tts",
-    "path": "skills/sherpa-onnx-tts",
-    "sha": "58d65e550658e1c9dbbbb14b8db69559c098aebb",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/sherpa-onnx-tts?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/sherpa-onnx-tts",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/58d65e550658e1c9dbbbb14b8db69559c098aebb",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/sherpa-onnx-tts?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/58d65e550658e1c9dbbbb14b8db69559c098aebb",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/sherpa-onnx-tts"
-    }
-  },
-  {
-    "name": "skill-creator",
-    "path": "skills/skill-creator",
-    "sha": "03de1dd80690cc1c84bcf92cf53c1b88b0022ab9",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/skill-creator?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/skill-creator",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/03de1dd80690cc1c84bcf92cf53c1b88b0022ab9",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/skill-creator?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/03de1dd80690cc1c84bcf92cf53c1b88b0022ab9",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/skill-creator"
-    }
-  },
-  {
-    "name": "slack",
-    "path": "skills/slack",
-    "sha": "793c7af6bad2d224364905b35bfc992766b30283",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/slack?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/slack",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/793c7af6bad2d224364905b35bfc992766b30283",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/slack?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/793c7af6bad2d224364905b35bfc992766b30283",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/slack"
-    }
-  },
-  {
-    "name": "songsee",
-    "path": "skills/songsee",
-    "sha": "cf3277c03dc2f299e05776fc43aa2afa7d341b96",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/songsee?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/songsee",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/cf3277c03dc2f299e05776fc43aa2afa7d341b96",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/songsee?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/cf3277c03dc2f299e05776fc43aa2afa7d341b96",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/songsee"
-    }
-  },
-  {
-    "name": "sonoscli",
-    "path": "skills/sonoscli",
-    "sha": "a67fb3dcb920bc94dabbf2531a9c7492772d85b2",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/sonoscli?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/sonoscli",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/a67fb3dcb920bc94dabbf2531a9c7492772d85b2",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/sonoscli?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/a67fb3dcb920bc94dabbf2531a9c7492772d85b2",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/sonoscli"
-    }
-  },
-  {
-    "name": "spotify-player",
-    "path": "skills/spotify-player",
-    "sha": "3f68dd681f726db439d51099cfdc267cf77fa0bc",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/spotify-player?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/spotify-player",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/3f68dd681f726db439d51099cfdc267cf77fa0bc",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/spotify-player?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/3f68dd681f726db439d51099cfdc267cf77fa0bc",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/spotify-player"
-    }
-  },
-  {
-    "name": "summarize",
-    "path": "skills/summarize",
-    "sha": "f0c510e8baf1feda024c2b65731d46eda748d68b",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/summarize?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/summarize",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/f0c510e8baf1feda024c2b65731d46eda748d68b",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/summarize?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/f0c510e8baf1feda024c2b65731d46eda748d68b",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/summarize"
-    }
-  },
-  {
-    "name": "things-mac",
-    "path": "skills/things-mac",
-    "sha": "36da378880f09ef0935c2e57f510945cde521ef4",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/things-mac?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/things-mac",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/36da378880f09ef0935c2e57f510945cde521ef4",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/things-mac?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/36da378880f09ef0935c2e57f510945cde521ef4",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/things-mac"
-    }
-  },
-  {
-    "name": "tmux",
-    "path": "skills/tmux",
-    "sha": "48f40c56b2ce463373dfa2f717b2d1f79b82790f",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/tmux?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/tmux",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/48f40c56b2ce463373dfa2f717b2d1f79b82790f",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/tmux?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/48f40c56b2ce463373dfa2f717b2d1f79b82790f",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/tmux"
-    }
-  },
-  {
-    "name": "trello",
-    "path": "skills/trello",
-    "sha": "79e54683fd1ea0876a065f3d00262f04c0c01ce4",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/trello?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/trello",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/79e54683fd1ea0876a065f3d00262f04c0c01ce4",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/trello?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/79e54683fd1ea0876a065f3d00262f04c0c01ce4",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/trello"
-    }
-  },
-  {
-    "name": "video-frames",
-    "path": "skills/video-frames",
-    "sha": "4623075b246bfb7668887f4ae906cef2572fd28d",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/video-frames?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/video-frames",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/4623075b246bfb7668887f4ae906cef2572fd28d",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/video-frames?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/4623075b246bfb7668887f4ae906cef2572fd28d",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/video-frames"
-    }
-  },
-  {
-    "name": "voice-call",
-    "path": "skills/voice-call",
-    "sha": "a1d5dda9778bb7e10c3f5db5d886e3d2da1a89eb",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/voice-call?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/voice-call",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/a1d5dda9778bb7e10c3f5db5d886e3d2da1a89eb",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/voice-call?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/a1d5dda9778bb7e10c3f5db5d886e3d2da1a89eb",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/voice-call"
-    }
-  },
-  {
-    "name": "wacli",
-    "path": "skills/wacli",
-    "sha": "8386b538fe31df8d0267c400a90ccc07a7b8715f",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/wacli?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/wacli",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/8386b538fe31df8d0267c400a90ccc07a7b8715f",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/wacli?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/8386b538fe31df8d0267c400a90ccc07a7b8715f",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/wacli"
-    }
-  },
-  {
-    "name": "weather",
-    "path": "skills/weather",
-    "sha": "8835a5ee1dfe7c32de9d1c5b5f6ddc7cae3745f3",
-    "size": 0,
-    "url": "https://api.github.com/repos/moltbot/moltbot/contents/skills/weather?ref=main",
-    "html_url": "https://github.com/moltbot/moltbot/tree/main/skills/weather",
-    "git_url": "https://api.github.com/repos/moltbot/moltbot/git/trees/8835a5ee1dfe7c32de9d1c5b5f6ddc7cae3745f3",
-    "download_url": null,
-    "type": "dir",
-    "_links": {
-      "self": "https://api.github.com/repos/moltbot/moltbot/contents/skills/weather?ref=main",
-      "git": "https://api.github.com/repos/moltbot/moltbot/git/trees/8835a5ee1dfe7c32de9d1c5b5f6ddc7cae3745f3",
-      "html": "https://github.com/moltbot/moltbot/tree/main/skills/weather"
+  ]
 }
-EOF
