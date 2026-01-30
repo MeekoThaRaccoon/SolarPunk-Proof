@@ -1,8 +1,0 @@
-name: Disable Previous Workflow
-on: push
-jobs:
-  disable:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Nothing to do
-        run: echo "The failing workflow has been overridden"
