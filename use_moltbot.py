@@ -2,7 +2,7 @@ import requests
 import json
 
 # Load the connection manifest
-response = requests.get("https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/moltbot_connection.json")
+response = requests.get("https://raw.githubusercontent.com/meekotharaccoon/SolarPunk-Proof/main/moltbot_connection.json")
 manifest = response.json()
 
 print(f"🌱 Connected to {manifest['node']} with {manifest['skill_count']} skills")
