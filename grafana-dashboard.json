@@ -1,0 +1,33 @@
+{
+  "dashboard": {
+    "title": "SolarPunk Nexus Live",
+    "panels": [
+      {
+        "title": "Growth Equation",
+        "type": "text",
+        "content": "# (OpenSource × Docker)^Simultaneity × Network Effect\n\n## Real-time Metrics:"
+      },
+      {
+        "title": "Service Health",
+        "type": "stat",
+        "targets": [
+          {"query": "SELECT count(*) FROM services WHERE status='up'", "refId": "A"}
+        ]
+      },
+      {
+        "title": "Impact Events",
+        "type": "graph",
+        "targets": [
+          {"query": "SELECT COUNT(*) FROM impact_events WHERE time > now() - 1h", "refId": "A"}
+        ]
+      },
+      {
+        "title": "Network Effect",
+        "type": "gauge",
+        "targets": [
+          {"query": "SELECT (active_connections * 100.0 / total_possible) FROM network_metrics", "refId": "A"}
+        ]
+      }
+    ]
+  }
+}

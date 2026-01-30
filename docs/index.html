@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SolarPunk Impact Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* CRITICAL: Remove animations that cause jank */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a0f1e;
+            color: #fff;
+            line-height: 1.6;
+            padding: 20px;
+            overflow-x: hidden;
+            /* Enable GPU acceleration */
+            transform: translateZ(0);
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: #00ff9d;
+            margin: 20px 0;
+            font-size: 28px;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+            border: 1px solid rgba(0, 255, 157, 0.2);
+        }
+        
+        button {
+            background: #00ff9d;
+            color: #0a0f1e;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 10px 5px;
+            transition: opacity 0.2s;
+        }
+        
+        button:hover {
+            opacity: 0.9;
+        }
+        
+        .counter {
+            font-size: 48px;
+            font-weight: bold;
+            color: #00ff9d;
+            margin: 20px 0;
+        }
+        
+        /* FIX: Use will-change on elements that animate */
+        .counter {
+            will-change: transform;
+        }
+        
+        /* Remove any heavy box-shadows or complex gradients */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌱 SolarPunk Impact Hub</h1>
+        
+        <div class="card">
+            <h2>Global Impact</h2>
+            <div class="counter" id="trees">0</div>
+            <p>Trees Planted</p>
+            <button onclick="plantTree()">Plant a Tree</button>
+        </div>
+        
+        <div class="card">
+            <h2>Growth Equation</h2>
+            <p><strong>(Human × AI)^Simultaneity × Network Effect</strong></p>
+            <p>Current Multiplier: <span id="multiplier">1</span></p>
+            <button onclick="increaseMultiplier()">Increase Multiplier</button>
+        </div>
+        
+        <div class="card">
+            <h2>🚀 SolarPunk Nexus</h2>
+            <p>Deploy all OpenAlternative tools:</p>
+            <button onclick="window.location.href='nexus.html'">Open Nexus Dashboard</button>
+        </div>
+    </div>
+
+    <script>
+        // SIMPLE, FAST JavaScript
+        let trees = parseInt(localStorage.getItem('trees')) || 0;
+        let multiplier = parseInt(localStorage.getItem('multiplier')) || 1;
+        
+        function updateDisplay() {
+            document.getElementById('trees').textContent = trees;
+            document.getElementById('multiplier').textContent = multiplier;
+        }
+        
+        function plantTree() {
+            trees++;
+            localStorage.setItem('trees', trees);
+            updateDisplay();
+        }
+        
+        function increaseMultiplier() {
+            multiplier++;
+            localStorage.setItem('multiplier', multiplier);
+            updateDisplay();
+        }
+        
+        // Initial load
+        updateDisplay();
+        
+        // Remove scroll listeners that cause jank
+        // Use passive listeners if needed
+        window.addEventListener('scroll', () => {}, { passive: true });
+    </script>
+</body>
+</html>

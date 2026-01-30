@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SolarPunk Nexus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: monospace;
+            background: #0a0f1e;
+            color: #00ff9d;
+            line-height: 1.6;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        h1 { font-size: 24px; margin: 20px 0; }
+        .card {
+            background: rgba(0, 255, 157, 0.05);
+            border: 1px solid #00ff9d;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        button {
+            background: #00ff9d;
+            color: #0a0f1e;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px 0;
+            display: block;
+            width: 100%;
+        }
+        pre {
+            background: #000;
+            color: #0f0;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+        .status { 
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-left: 10px;
+            font-size: 12px;
+        }
+        .up { background: rgba(0,255,0,0.2); color: #0f0; }
+        .down { background: rgba(255,0,0,0.2); color: #f00; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⚡ SolarPunk Nexus</h1>
+        <p>All OpenAlternative tools in one place.</p>
+        
+        <div class="card">
+            <h3>🚀 Instant Deployment</h3>
+            <pre id="deploy-cmd">curl -s https://raw.githubusercontent.com/MeekoThaRaccoon/SolarPunk-Proof/main/deploy.sh | bash</pre>
+            <button onclick="copyCommand()">Copy Deployment Command</button>
+        </div>
+        
+        <div class="card">
+            <h3>📊 Services Status</h3>
+            <div id="services"></div>
+            <button onclick="checkServices()">Check Services</button>
+        </div>
+        
+        <div class="card">
+            <h3>🔗 Quick Links</h3>
+            <button onclick="window.location.href='/'">← Back to Main Hub</button>
+            <button onclick="window.open('https://github.com/MeekoThaRaccoon/SolarPunk-Proof', '_blank')">GitHub Repo</button>
+        </div>
+    </div>
+
+    <script>
+        // Simple, fast functions
+        function copyCommand() {
+            navigator.clipboard.writeText(document.getElementById('deploy-cmd').textContent);
+            alert('Command copied! Run it in terminal.');
+        }
+        
+        async function checkServices() {
+            const services = [
+                {name: 'Supabase', port: 3000, path: '/'},
+                {name: 'n8n', port: 5678, path: '/'},
+                {name: 'Uptime Kuma', port: 3001, path: '/'}
+            ];
+            
+            const container = document.getElementById('services');
+            container.innerHTML = '';
+            
+            for (const svc of services) {
+                const div = document.createElement('div');
+                div.innerHTML = `${svc.name}: <span class="status">Checking...</span>`;
+                container.appendChild(div);
+                
+                try {
+                    // Using a simple fetch with timeout
+                    const controller = new AbortController();
+                    const timeoutId = setTimeout(() => controller.abort(), 3000);
+                    
+                    await fetch(`http://localhost:${svc.port}${svc.path}`, {
+                        mode: 'no-cors',
+                        signal: controller.signal
+                    });
+                    
+                    clearTimeout(timeoutId);
+                    div.innerHTML = `${svc.name}: <span class="status up">UP</span>`;
+                } catch {
+                    div.innerHTML = `${svc.name}: <span class="status down">DOWN</span>`;
+                }
+            }
+        }
+        
+        // Initial check after 2 seconds
+        setTimeout(checkServices, 2000);
+    </script>
+</body>
+</html>
