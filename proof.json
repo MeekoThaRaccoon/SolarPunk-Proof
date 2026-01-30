@@ -52,10 +52,13 @@
     },
     "files": {
       "website": "index.html",
+      "impact_button": "solarpunk-button.html",
+      "ai_interface": "solarpunk-ai.html",
+      "chat_history": "chat-history.json",
       "proof_document": "proof.json",
       "connection_manifest": "moltbot_connection.json",
       "universal_adapter": "use_moltbot.py"
     },
-    "conclusion": "The growth equation has been verified through tangible, working implementation. The connection between SolarPunk and moltbot is now active and available to the entire network."
+    "conclusion": "The growth equation has been verified through tangible, working implementation. The connection between SolarPunk and moltbot is now active and available to the entire network. One-click impact generation proves regenerative design in action."
   }
 }
